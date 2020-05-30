@@ -6,6 +6,7 @@
 # Mirror available at https://notabug.org/erwincatt/hackingtool
 # Mirror short link: https://nxnt.link/hack1 and https://is.gd/aiohack1
 
+
 # This fix script is now on git!
 # You can see and/or clone it from the link below.
 # https://ghnou.su/gitea/ghnou/fix
